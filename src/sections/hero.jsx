@@ -1,8 +1,5 @@
 import React from "react";
-const words = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-];
+import {words} from '../constants/index.js'
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
