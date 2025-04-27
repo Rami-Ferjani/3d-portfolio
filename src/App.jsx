@@ -1,11 +1,11 @@
-import React from 'react';
-
+import React from "react";
+import Hero from "./sections/hero.jsx";
 const App = () => {
-    return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
-    );
+  return (
+    <>
+      <Hero />
+    </>
+  );
 };
 
 export default App;
