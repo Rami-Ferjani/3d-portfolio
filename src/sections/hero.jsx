@@ -42,6 +42,9 @@ const Hero = () => {
             <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="see my work" />
           </div>
         </header>
+        <figure>
+          <div className="hero-3d-layout"></div>
+        </figure>
         {/*RIGHT:3D MODEL */}
       </div>
     </section>
