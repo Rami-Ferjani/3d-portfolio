@@ -1,6 +1,7 @@
 import React from "react";
 import { words } from "../constants/index.js";
 import { Button } from "../components/Button.jsx";
+import HeroExperience from "../components/HeroExperience.jsx";
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
@@ -39,11 +40,17 @@ const Hero = () => {
               Hi , I'm Rami, a software engineer based in tunisia with a passion
               for code
             </p>
-            <Button className="md:w-80 md:h-16 w-60 h-12" id="button" text="see my work" />
+            <Button
+              className="md:w-80 md:h-16 w-60 h-12"
+              id="button"
+              text="see my work"
+            />
           </div>
         </header>
         <figure>
-          <div className="hero-3d-layout"></div>
+          <div className="hero-3d-layout" border-red-200 border-2>
+            <HeroExperience />
+          </div>
         </figure>
         {/*RIGHT:3D MODEL */}
       </div>
