@@ -1,7 +1,7 @@
 import React from "react";
 import { words } from "../constants/index.js";
 import { Button } from "../components/Button.jsx";
-import HeroExperience from "../components/HeroExperience.jsx";
+import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
 const Hero = () => {
   return (
     <section id="hero" className="relative overflow-hidden">
