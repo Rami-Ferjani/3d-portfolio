@@ -7,7 +7,7 @@ export const Button = ({ text, className, id }) => {
         e.preventDefault();
         const target = document.getElementById("counter");
         if (target && id) {
-          const offset = window.innerHeight + 0.15;
+          const offset = 0.15 * window.innerHeight; // Adjust offset to a fraction of the viewport height
           const top =
             target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top, behavior: "smooth" });
