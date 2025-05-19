@@ -7,6 +7,21 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const ExperienceSection = () => {
+  useGSAP(() => {
+    gsap.utils.toArray(".timeline-card").forEach((card) => {
+      gsap.from(card, {
+        xPercent: -100,
+        opacity: 0,
+        transformOrigin: "lefft left",
+        duration: 1,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+        },
+      });
+    });
+  }, []);
   return (
     <section
       id="experience"
@@ -32,7 +47,7 @@ const ExperienceSection = () => {
                     <div className="gradient-line w-1 h-full" />
                   </div>
 
-                  <div className="expText flex xl:gap-20 md: gap-10 gap-5 relative z-20">
+                  <div className="expText flex xl:gap-20 md:gap-10 gap-5 relative z-20">
                     <div className="timeline-logo">
                       <img src={card.logoPath} alt="logo" />
                     </div>
