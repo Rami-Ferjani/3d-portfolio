@@ -12,7 +12,7 @@ const ExperienceSection = () => {
       gsap.from(card, {
         xPercent: -100,
         opacity: 0,
-        transformOrigin: "lefft left",
+        transformOrigin: "left left",
         duration: 1,
         ease: "power2.inOut",
         scrollTrigger: {
@@ -20,6 +20,20 @@ const ExperienceSection = () => {
           start: "top 80%",
         },
       });
+    });
+    gsap.to(".timeline", {
+      transformOrigin: "bottom bottom",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".timeline",
+        start: "top center",
+        end: "70% center",
+        onUpdate: (self) => {
+          gsap.to(".timeline", {
+            scaleY: 1 - self.progress,
+          });
+        },
+      },
     });
   }, []);
   return (
