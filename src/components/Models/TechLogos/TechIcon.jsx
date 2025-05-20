@@ -2,8 +2,24 @@ import React, { useEffect } from "react";
 import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import * as THREE from "three";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const TechIcon = ({ model }) => {
+  useGSAP(() => {
+    gsap.fromTo(
+      ".tech-card",
+      { y: 50, opacity: 0 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power2.inOut",
+        stagger: 0.2,
+        scrollTrigger: { trigger: "#skills", start: "top center" },
+      }
+    );
+  });
   const scene = useGLTF(model.modelPath);
   useEffect(() => {
     if (model.name === "Interactive Developer") {
