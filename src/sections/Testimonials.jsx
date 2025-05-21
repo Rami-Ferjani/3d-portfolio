@@ -15,7 +15,11 @@ const Testimonials = () => {
       <div className="lg:columns-3 md:columns-2 columns-1 my-16">
         {testimonials.map((testimonial) => (
           <GlowCard card={testimonial}>
-            <div className="flex items-center gap-3">test</div>
+            <div className="flex items-center gap-3">
+              <div className="">
+                <img src={testimonial.imgPath} alt={testimonial.name} />
+              </div>
+            </div>
           </GlowCard>
         ))}
       </div>
