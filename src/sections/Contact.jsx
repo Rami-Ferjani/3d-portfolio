@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 
 const Contact = () => {
   const formRef = useRef(null);
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -72,33 +72,17 @@ const [loading, setLoading] = useState(false);
                   />
                 </div>
 
-                <div className="flex gap-4">
-                  <button type="submit">
-                    <div className="cta-button group">
-                      <div className="bg-circle" />
-                      <p className="text">
-                        {loading ? "Sending..." : "Send Message"}
-                      </p>
-                      <div className="arrow-wrapper">
-                        <img src="/images/arrow-down.svg" alt="arrow" />
-                      </div>
+                <button type="submit">
+                  <div className="cta-button group">
+                    <div className="bg-circle" />
+                    <p className="text">
+                      {loading ? "Sending..." : "Send Message"}
+                    </p>
+                    <div className="arrow-wrapper">
+                      <img src="/images/arrow-down.svg" alt="arrow" />
                     </div>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setForm({ name: "", email: "", message: "" })
-                    }
-                  >
-                    <div className="cta-button group">
-                      <div className="bg-circle" />
-                      <p className="text">Clear</p>
-                      <div className="arrow-wrapper">
-                        <img src="/images/arrow-down.svg" alt="arrow" />
-                      </div>
-                    </div>
-                  </button>
-                </div>
+                  </div>
+                </button>
               </form>
             </div>
           </div>
