@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",

@@ -1,39 +1,55 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
+import { Computer } from "./Models/Computer-optimized";
 
 const ComputerModel = () => {
-  const computer = useGLTF("/models/computer-optimized-transformed.glb");
-  return (
-    <primitive 
-      object={computer.scene} 
-      scale={2.5}
-      position={[0, -1.5, 0]}
-      rotation={[0, -Math.PI / 4, 0]}
-    />
-  );
+  //   const computer = useGLTF("/models/computer-optimized-transformed.glb");
+  //   return (
+  //     <primitive
+  //       object={computer.scene}
+  //       scale={2.5}
+  //       position={[0, -1.5, 0]}
+  //       rotation={[0, -Math.PI / 4, 0]}
+  //     />
+  //   );
 };
+
+// const ContactLights = () => {
+//   return (
+//     <>
+//       <ambientLight intensity={0.3} />
+//       <spotLight
+//         position={[0, 5, 5]}
+//         intensity={80}
+//         angle={0.15}
+//         penumbra={0.4}
+//         color="white"
+//       />
+//       <spotLight
+//         position={[5, 2, 0]}
+//         intensity={40}
+//         angle={0.3}
+//         penumbra={0.5}
+//         color="#4cc9f0"
+//       />
+//       <pointLight position={[-5, 2, 0]} intensity={20} color="#7209b7" />
+//     </>
+//   );
+// };
 
 const ContactLights = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <spotLight
-        position={[0, 5, 5]}
-        intensity={80}
-        angle={0.15}
-        penumbra={0.4}
-        color="white"
+      <ambientLight intensity={1.5} />
+      <directionalLight
+        position={[5, 10, 5]}
+        intensity={1}
+        castShadow
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
       />
-      <spotLight
-        position={[5, 2, 0]}
-        intensity={40}
-        angle={0.3}
-        penumbra={0.5}
-        color="#4cc9f0"
-      />
-      <pointLight position={[-5, 2, 0]} intensity={20} color="#7209b7" />
     </>
   );
 };
@@ -53,9 +69,9 @@ const ContactExperience = () => {
           autoRotateSpeed={0.5}
         />
         <ContactLights />
-        <Suspense fallback={null}>
-          <ComputerModel />
-        </Suspense>
+        <group scale={0.03} position={[0, -1.5, -2]} castShadow>
+          <Computer />
+        </group>
       </Canvas>
     </div>
   );
