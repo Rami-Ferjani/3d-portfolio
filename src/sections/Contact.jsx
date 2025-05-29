@@ -26,6 +26,7 @@ const Contact = () => {
         <TitleHeader title="Contact" sub="Contact me" />
 
         <div className="grid-12-cols mt-16">
+          {/* Contact Form - Left Side */}
           <div className="xl:col-span-5  ">
             <div className="flex-center card-border rounded-xl p-10">
               <form
@@ -88,7 +89,9 @@ const Contact = () => {
           </div>
           {/*  3D Experience on the right side (5 columns) */}
           <div className="xl:col-span-7 min-h-96  ">
-            <ContactExperience />
+            <div className="w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden">
+              <ContactExperience />
+            </div>
           </div>
         </div>
       </div>
