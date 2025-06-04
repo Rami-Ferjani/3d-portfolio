@@ -71,7 +71,31 @@ const ContactExperience = () => {
           autoRotate
           autoRotateSpeed={0.5}
         />
-        <ContactLights />
+        {/* Enhanced lighting for realism */}
+        <ambientLight intensity={0.7} />
+        <directionalLight
+          position={[5, 10, 5]}
+          intensity={1.2}
+          castShadow
+          shadow-mapSize-width={2048}
+          shadow-mapSize-height={2048}
+          shadow-bias={-0.0005}
+        />
+        <spotLight
+          position={[-5, 8, 8]}
+          angle={0.3}
+          penumbra={0.7}
+          intensity={1}
+          castShadow
+          color="#fffbe7"
+          shadow-mapSize-width={1024}
+          shadow-mapSize-height={1024}
+        />
+        <pointLight
+          position={[0, 5, -5]}
+          intensity={0.5}
+          color="#bde0fe"
+        />
         <group scale={0.03} position={[0, -1.5, -2]} castShadow>
           <Computer castShadow />
         </group>
