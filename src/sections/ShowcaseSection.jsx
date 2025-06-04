@@ -72,7 +72,7 @@ const ShowcaseSection = () => {
                   alt="library Management Platform"
                 />
               </div>
-              <h2>Library Management Platform</h2>
+              <h2>3d Portfolio</h2>
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7db]">
