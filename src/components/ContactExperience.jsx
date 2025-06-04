@@ -57,7 +57,10 @@ const ContactLights = () => {
 const ContactExperience = () => {
   return (
     <div className="w-full h-full min-h-[400px]">
-      <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+      <Canvas
+        camera={{ position: [0, 0, 8], fov: 45 }}
+        shadows
+      >
         <OrbitControls
           enablePan={false}
           enableZoom={false}
@@ -70,7 +73,7 @@ const ContactExperience = () => {
         />
         <ContactLights />
         <group scale={0.03} position={[0, -1.5, -2]} castShadow>
-          <Computer />
+          <Computer castShadow />
         </group>
         <group scale={[1, 1, 1]}>
           <mesh
@@ -79,7 +82,7 @@ const ContactExperience = () => {
             rotation={[-Math.PI / 2, 0, 0]}
           >
             <planeGeometry args={[30, 30]} />
-            <meshStandardMaterial color="#cd7c2e" />
+            <shadowMaterial opacity={0.4} />
           </mesh>
         </group>
       </Canvas>
