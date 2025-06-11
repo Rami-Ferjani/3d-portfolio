@@ -18,6 +18,8 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // You can add form submission logic here, e.g., send data to an API or show a success message
+    console.log("Form submitted", form);
+    setForm;
   };
   return (
     <section id="contact" className="flex-center section-padding">
