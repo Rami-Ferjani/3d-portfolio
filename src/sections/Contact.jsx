@@ -2,23 +2,35 @@ import React from "react";
 import TitleHeader from "../components/TitleHeader";
 import ContactExperience from "../components/ContactExperience";
 import { useRef, useState } from "react";
-
+import emailjs from "@emailjs/browser";
 const Contact = () => {
   const formRef = useRef(null);
-  const [loading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add form submission logic here, e.g., send data to an API or show a success message
+    setLoading(true);
+    try {
+      await emailjs.sendForm(
+        import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+      );
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.log("EMAILJS ERROR :", error);
+    } finally {
+      setLoading(false);
+    }
   };
   return (
     <section id="contact" className="flex-center section-padding">
@@ -73,7 +85,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
