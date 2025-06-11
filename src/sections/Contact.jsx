@@ -5,13 +5,12 @@ import { useRef, useState } from "react";
 
 const Contact = () => {
   const formRef = useRef(null);
-  const [loading] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
-
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
@@ -73,7 +72,7 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
