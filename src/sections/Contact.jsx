@@ -17,13 +17,12 @@ const Contact = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add form submission logic here, e.g., send data to an API or show a success message
-
     setLoading(true);
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
       setForm({ name: "", email: "", message: "" });
