@@ -95,8 +95,8 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "React Native Developer",
+    imgPath: "/images/logos/react.png",
   },
   {
     name: "Backend Developer",
