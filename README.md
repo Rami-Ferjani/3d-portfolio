@@ -1,13 +1,63 @@
-# React + Vite
+# 🎨 3D Portfolio — React + Three.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **3D interactive developer portfolio** built with React and **Three.js** to showcase skills, projects, and experience in a visually engaging way.  
+This site combines immersive 3D elements with modern web design for a standout online presence.:contentReference[oaicite:2]{index=2}
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+🚀 **Check it live:** https://3d-portfolio-two-taupe.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-"# 3d-portfolio" 
+*(Replace this with your actual deployment URL)*
+
+---
+
+## 💡 About the Project
+
+This project is a **personal portfolio website** featuring interactive 3D graphics and smooth UI interactions.  
+It’s designed to help you present your work and creativity in a way that’s **fun, modern, and memorable** — perfect for impressing recruiters, clients, or collaborators.:contentReference[oaicite:3]{index=3}
+
+Key highlights include:
+- **3D animated visuals**
+- Interactive user experience
+- Responsive design
+
+---
+
+## ⚙️ Built With
+
+- ⚛️ **React** – for component-driven UI
+- 🧠 **Three.js** – for 3D rendering and graphics
+- 🌐 **React Three Fiber** – React renderer for Three.js (if used)
+- ✨ **Tailwind CSS** – utility-first styling
+- 🚀 **Vite** – fast build tooling and dev server
+- 💫 Other animation libs (e.g., Framer Motion) *(optional)*
+
+> Adjust the stack above depending on what your project actually uses.
+
+---
+
+## 🚀 Features
+
+- 🎯 **3D Interactive Experience**
+  - Immersive 3D scenes powered by Three.js
+  - Smooth navigation and visuals
+- 📱 **Responsive Design**
+  - Works on desktop, tablets, and mobile
+- 🎨 **Custom Sections**
+  - About, Skills, Projects, Contact, etc.
+- 🔗 Optional contact form or external links
+
+*(Update the list based on your real content.)*
+
+---
+
+## 🛠️ Getting Started
+
+Follow these steps to run the project locally:
+
+### **1. Clone the repo**
+```bash
+git clone https://github.com/Rami-Ferjani/3d-portfolio.git
+cd 3d-portfolio
