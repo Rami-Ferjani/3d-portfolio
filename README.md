@@ -7,7 +7,7 @@ This site combines immersive 3D elements with modern web design for a standout o
 
 ## 🌐 Live Demo
 
-🚀 **Check it live:** https://3d-portfolio-two-taupe.vercel.app/
+🚀 **Check it live:** 
 
 *(Replace this with your actual deployment URL)*
 
